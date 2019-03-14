@@ -1,11 +1,12 @@
 {
-    "name": "magefan/module-blogcommentsrecaptcha",
+    "name": "magefan/module-blog-comments-recaptcha",
     "description": "",
     "type": "magento2-module",
     "license": "proprietary",
     "minimum-stability": "dev",
     "require": {
-        "msp/recaptcha" : "1.4.9"
+        "msp/recaptcha" : "^1.4.9",
+        "magefan/module-blog" : "^2.8.8"
     },
     "autoload": {
         "files": [
