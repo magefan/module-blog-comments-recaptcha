@@ -2,7 +2,7 @@
     "name": "magefan/module-blog-comments-recaptcha",
     "description": "Add recaptcha to Magefan Blog Comments",
     "require": {
-        "msp/recaptcha" : "^1.4.9",
+        "msp/recaptcha" : "^2.0.2",
         "magefan/module-blog" : "^2.8.9"
     },
     "type": "magento2-module",
