@@ -9,7 +9,6 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="msp_securitysuite_recaptcha">
-
             <group id="frontend" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
                    showInStore="1">
                 <field id="enabled_mfblog_comments" translate="label" type="select" sortOrder="220" showInDefault="1"
