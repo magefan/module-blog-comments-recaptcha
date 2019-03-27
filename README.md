@@ -57,18 +57,21 @@ Try out our open demo and if you like our extension **please give us some star o
 </table>
 
 
-## Add-ons
-  * [Blog Graph Gl for Magneto 2.2.x by Magefan](https://github.com/magefan/module-blog-graph-ql)
-  * [ElasticSuite Blog search for Magento 2 by Comwrap](https://github.com/comwrap/Comwrap_ElasticsuiteBlog)
-  * [Blog Media Gallery for Magneto 2.2.x by Magefan DEPRECATED](https://github.com/magefan/module-blog-m22)
-
-
-## Installation Instruction
+## Installation via the Composer
 composer require magefan/module-blog-comments-recaptcha
 bin/magento setup:upgrade
 bin/magento setup:di:compile
 bin/magento setup:static-content:deploy
 
+
+## Install via FTP
+1. Download Extension ZIP Archive
+2. Extract files
+3. Copy files from archive into path_to_magento2/app/code/Magefan/BlogCommentsReCaptcha 
+4. Run CLI commands
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy
 
 ## Support
 If you have any issues, please [contact us](mailto:support@magefan.com)
