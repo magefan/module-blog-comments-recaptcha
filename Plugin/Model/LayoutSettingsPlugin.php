@@ -24,7 +24,7 @@ class LayoutSettingsPlugin
      */
     public function __construct(
         ScopeConfigInterface $scopeConfig
-    ){
+    ) {
         $this->scopeConfig = $scopeConfig;
     }
 
