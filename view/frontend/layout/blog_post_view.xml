@@ -22,6 +22,7 @@
                     </argument>
                 </arguments>
             </block>
+            <block name="msp.mfblog.recaptcha.js" template="Magefan_BlogCommentsReCaptcha::recaptcha_js.phtml"/>
         </referenceContainer>
     </body>
 </page>

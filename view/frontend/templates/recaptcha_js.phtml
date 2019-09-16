@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+?>
+<script>
+    require([
+        "jquery",
+        "domReady!"
+    ], function($){
+
+        $(".comment-form-blog-recaptcha").click(function() {
+            $( "#recaptcha-append-to" ).appendTo( $( ".comment-form-blog-recaptcha"));
+        });
+        $(".reply-form-blog-recaptcha").click(function() {
+            $( "#recaptcha-append-to" ).appendTo( $( ".reply-form-blog-recaptcha"));
+        });
+    });
+</script>
