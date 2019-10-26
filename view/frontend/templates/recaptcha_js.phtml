@@ -4,17 +4,23 @@
  * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
  */
 ?>
+<?php
+/**
+ * Blog comments recaptcha js
+ *
+ * @var $block \Magento\Framework\View\Element\Template
+ */
+?>
 <script>
     require([
         "jquery",
         "domReady!"
     ], function($){
-
-        $(".comment-form-blog-recaptcha").click(function() {
-            $( "#recaptcha-append-to" ).appendTo( $( ".comment-form-blog-recaptcha"));
-        });
-        $(".reply-form-blog-recaptcha").click(function() {
-            $( "#recaptcha-append-to" ).appendTo( $( ".reply-form-blog-recaptcha"));
+        var rid = '#recaptcha-append-to';
+        $('.comment-form-blog-recaptcha, .reply-form-blog-recaptcha').click(function() {
+            if (!$(this).find(rid).length) {
+                $(rid).appendTo($(this));
+            }
         });
     });
 </script>
