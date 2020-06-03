@@ -9,7 +9,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="blog.post.comments.magefan.additional">
-            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp.mfblog.recaptcha" before="addthis.js.init"
+            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp.mfblog.recaptcha"
                    template="MSP_ReCaptcha::msp_recaptcha.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
@@ -22,7 +22,22 @@
                     </argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Template" name="msp.mfblog.recaptcha.js" template="Magefan_BlogCommentsReCaptcha::recaptcha_js.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="blog.post.comments.magefan.reply.additional">
+            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp.mfblog.recaptcha.reply"
+                   template="MSP_ReCaptcha::msp_recaptcha.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="msp-recaptcha" xsi:type="array">
+                                <item name="component" xsi:type="string">MSP_ReCaptcha/js/reCaptcha</item>
+                                <item name="zone" xsi:type="string">mfblog_comments</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
+
