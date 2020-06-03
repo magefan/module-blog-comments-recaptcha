@@ -3,10 +3,10 @@
     "description": "Add recaptcha to Magefan Blog Comments",
     "require": {
         "msp/recaptcha" : ">=2.0.2",
-        "magefan/module-blog" : ">=2.9.1"
+        "magefan/module-blog" : ">=2.9.4.3"
     },
     "type": "magento2-module",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
