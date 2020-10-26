@@ -6,9 +6,8 @@
 This Magento 2 Blog ReCaptcha module allows to enable ReCaptcha in Magefan Blog Comments
 
 ## Requirements
-  * Magento Community Edition 2.1.2-2.4.0 or Magento Enterprise Edition 2.1.2-2.4.0
+  * Magento Community Edition 2.1.2-2.4.x or Magento Enterprise Edition 2.1.2-2.4.x
   * Magefan Blog extension >= 2.9.4.3
-  * MSP ReCaptcha >= 1.4.9
   
 ## Requirements
 * [How to enable Blog Comments reCaptcha in Magento 2?](https://magefan.com/magento2-blog-extension/enable-comments-recaptcha)
@@ -28,7 +27,7 @@ Try out our open demo and if you like our extension **please give us some star o
     </tr>
     <tr>
       <td align="center" valign="middle">
-        <a href="http://blog.demo.magefan.com/blog/">
+        <a href="http://blog.demo.magefan.top/blog/">
           <img
             src="https://magefan.com/static/version1520969775/frontend/Magefan/default/en_US/images/product-tab-demo-1.jpg"
             alt="Magneto 2 Blog Extension Storefront Demo"
@@ -37,7 +36,7 @@ Try out our open demo and if you like our extension **please give us some star o
         </a>
       </td>
       <td align="center" valign="middle">
-        <a href="http://blog.demo.magefan.com/admin/">
+        <a href="http://blog.demo.magefan.top/admin/">
           <img
             src="https://magefan.com/static/version1520969775/frontend/Magefan/default/en_US/images/product-tab-demo-2.jpg"
             alt="Magneto 2 Blog Extension Admin Panel Demo"
@@ -48,12 +47,12 @@ Try out our open demo and if you like our extension **please give us some star o
     </tr>
     <tr>
       <td align="center" valign="middle">
-        <a href="http://blog.demo.magefan.com/blog/">
+        <a href="http://blog.demo.magefan.top/blog/">
           view
         </a>
       </td>
       <td align="center" valign="middle">
-        <a href="http://blog.demo.magefan.com/admin/">
+        <a href="http://blog.demo.magefan.top/admin/">
           view
         </a>
       </td>
