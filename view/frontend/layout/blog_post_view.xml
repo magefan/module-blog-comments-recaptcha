@@ -9,14 +9,17 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="blog.post.comments.magefan.additional">
-            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp.mfblog.recaptcha"
-                   template="MSP_ReCaptcha::msp_recaptcha.phtml">
+
+            <block class="Magento\ReCaptchaUi\Block\ReCaptcha"
+                   name="msp.mfblog.recaptcha" after="-"
+                   template="Magento_ReCaptchaFrontendUi::recaptcha.phtml"
+                   ifconfig="recaptcha_frontend/type_for/mfblog_comment">
                 <arguments>
+                    <argument name="recaptcha_for" xsi:type="string">mfblog_comment</argument>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
-                            <item name="msp-recaptcha" xsi:type="array">
-                                <item name="component" xsi:type="string">MSP_ReCaptcha/js/reCaptcha</item>
-                                <item name="zone" xsi:type="string">mfblog_comments</item>
+                            <item name="recaptcha" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_ReCaptchaFrontendUi/js/reCaptcha</item>
                             </item>
                         </item>
                     </argument>
@@ -24,14 +27,16 @@
             </block>
         </referenceContainer>
         <referenceContainer name="blog.post.comments.magefan.reply.additional">
-            <block class="MSP\ReCaptcha\Block\Frontend\ReCaptcha" name="msp.mfblog.recaptcha.reply"
-                   template="MSP_ReCaptcha::msp_recaptcha.phtml">
+            <block class="Magento\ReCaptchaUi\Block\ReCaptcha"
+                   name="msp.mfblog.recaptcha.reply" after="-"
+                   template="Magento_ReCaptchaFrontendUi::recaptcha.phtml"
+                   ifconfig="recaptcha_frontend/type_for/mfblog_comment">
                 <arguments>
+                    <argument name="recaptcha_for" xsi:type="string">mfblog_comment</argument>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
-                            <item name="msp-recaptcha" xsi:type="array">
-                                <item name="component" xsi:type="string">MSP_ReCaptcha/js/reCaptcha</item>
-                                <item name="zone" xsi:type="string">mfblog_comments</item>
+                            <item name="recaptcha" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_ReCaptchaFrontendUi/js/reCaptcha</item>
                             </item>
                         </item>
                     </argument>

@@ -7,22 +7,9 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-        <type name="MSP\ReCaptcha\Model\LayoutSettings">
-            <plugin name="magefan_blogcommentsrecaptcha_plugin_model_layoutsettingsplugin" type="Magefan\BlogCommentsReCaptcha\Plugin\Model\LayoutSettingsPlugin" sortOrder="1" disabled="false"/>
-        </type>
-
-        <virtualType name="Magefan\BlogCommentsReCaptcha\Model\Provider\IsCheckRequired\Frontend\CommentForm"
-                     type="MSP\ReCaptcha\Model\IsCheckRequired">
-            <arguments>
-                <argument name="enableConfigFlag" xsi:type="string">msp_securitysuite_recaptcha/frontend/enabled_mfblog_comments</argument>
-                <argument name="area" xsi:type="string">frontend</argument>
-            </arguments>
-        </virtualType>
-        <virtualType name="Magefan\BlogCommentsReCaptcha\Observer\Frontend\CommentFormObserver"
-                     type="MSP\ReCaptcha\Observer\ReCaptchaObserver">
-            <arguments>
-                <argument name="isCheckRequired" xsi:type="object">Magefan\BlogCommentsReCaptcha\Model\Provider\IsCheckRequired\Frontend\CommentForm</argument>
-                <argument name="failureProvider" xsi:type="object">Magefan\BlogCommentsReCaptcha\Model\Provider\Failure\AjaxResponseFailure</argument>
-            </arguments>
-        </virtualType>
+    <type name="Magefan\BlogCommentsReCaptcha\Observer\CommentFormObserver">
+        <arguments>
+            <argument name="captchaResponseResolver" xsi:type="object">Magefan\BlogCommentsReCaptcha\Model\CaptchaResponseResolver</argument>
+        </arguments>
+    </type>
 </config>

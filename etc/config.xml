@@ -8,10 +8,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <msp_securitysuite_recaptcha>
-            <frontend>
-                <enabled_mfblog_comments>1</enabled_mfblog_comments>
-            </frontend>
-        </msp_securitysuite_recaptcha>
+        <recaptcha_frontend>
+            <type_for>
+                <mfblog_comment>0</mfblog_comment>
+            </type_for>
+        </recaptcha_frontend>
     </default>
 </config>
