@@ -7,7 +7,7 @@ This Magento 2 Blog ReCaptcha module allows to enable ReCaptcha in Magefan Blog 
 
 ## Requirements
   * Magento Community Edition 2.1.2-2.3.x or Magento Enterprise Edition 2.1.2-2.3.x (use versin 2.0.5)
-  * Magento Community Edition 2.4.x or Magento Enterprise Edition 2.4.x (use version >= 2.1.0)
+  * Magento Community Edition 2.4.x or Magento Enterprise Edition 2.4.x (use version >= 2.1.1)
   * Magefan Blog extension >= 2.9.4.3
   
 ## Requirements
