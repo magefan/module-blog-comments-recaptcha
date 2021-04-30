@@ -96,7 +96,6 @@ class CommentFormObserver implements ObserverInterface
             try {
                 $reCaptchaResponse = $this->captchaResponseResolver->resolve($request);
             } catch (InputException $e) {
-                var_dump($e->getMessage());
                 $this->logger->error($e);
                 $this->errorProcessor->processError(
                     $response,
