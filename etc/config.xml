@@ -10,7 +10,7 @@
     <default>
         <recaptcha_frontend>
             <type_for>
-                <mfblog_comment>0</mfblog_comment>
+                <mfblog_comment/>
             </type_for>
         </recaptcha_frontend>
     </default>
