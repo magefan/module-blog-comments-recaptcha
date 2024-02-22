@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="blog.post.comments.magefan">
+        <block name="blog_comments_recaptcha_checkbox_form_element"
+               template="Magento_ReCaptchaFrontendUi::recaptcha_checkbox.phtml">
+            <arguments>
+                <argument name="form_id" xsi:type="string">comment_form</argument>
+            </arguments>
+        </block>
+        <block name="blog_comments_recaptcha_checkbox_reply_form_element"
+               template="Magento_ReCaptchaFrontendUi::recaptcha_checkbox.phtml">
+            <arguments>
+                <argument name="form_id" xsi:type="string">comment_reply_form</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+</page>
