@@ -6,7 +6,7 @@
         "magefan/module-blog" : ">=2.10.12"
     },
     "type": "magento2-module",
-    "version": "2.1.4",
+    "version": "2.1.5",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
