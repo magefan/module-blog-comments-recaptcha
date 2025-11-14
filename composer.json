@@ -1,12 +1,11 @@
 {
     "name": "magefan/module-blog-comments-recaptcha",
-    "description": "Add recaptcha to Magefan Blog Comments",
+    "description": "Add recaptcha to Magefan Blog Comments. Require magento/module-re-captcha-validation-api >= 1.0.0",
     "require": {
-        "magento/module-re-captcha-validation-api" : ">=1.0.0",
         "magefan/module-blog" : ">=2.14.0"
     },
     "type": "magento2-module",
-    "version": "2.1.6",
+    "version": "2.1.7",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
