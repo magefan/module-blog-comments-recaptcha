@@ -32,9 +32,9 @@ class CaptchaResponseResolver implements CaptchaResponseResolverInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Extract reCAPTCHA response parameter from Request object
      *
-     * @param  RequestInterface|PlainTextRequestInterface $request
+     * @param RequestInterface|PlainTextRequestInterface $request
      * @return string
      * @throws InputException
      */

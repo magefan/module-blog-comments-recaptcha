@@ -79,6 +79,8 @@ class CommentFormObserver implements ObserverInterface
     }
 
     /**
+     * Validate reCaptcha
+     *
      * @param  Observer $observer
      * @return void
      * @throws LocalizedException
