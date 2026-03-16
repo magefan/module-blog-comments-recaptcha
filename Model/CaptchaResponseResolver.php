@@ -49,7 +49,7 @@ class CaptchaResponseResolver implements CaptchaResponseResolverInterface
         try {
             //$params = $this->serializer->unserialize($content);
             $params = [];
-            parse_str($content, $params);
+            parse_str($content, $params); // phpcs:ignore Magento2.Functions.DiscouragedFunction.Discouraged
         } catch (\InvalidArgumentException $e) {
             throw new InputException(__('Can not resolve reCAPTCHA response.'), $e);
         }
