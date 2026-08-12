@@ -7,7 +7,9 @@ declare(strict_types=1);
 
 namespace Magefan\BlogCommentsReCaptcha\Observer;
 
-use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\ObjectManager;
+use Magento\Framework\App\RequestInterface;
+use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Exception\InputException;
@@ -55,12 +57,24 @@ class CommentFormObserver implements ObserverInterface
     private $errorProcessor;
 
     /**
+     * @var RequestInterface
+     */
+    private $request;
+
+    /**
+     * @var ResponseInterface
+     */
+    private $response;
+
+    /**
      * @param CaptchaResponseResolverInterface  $captchaResponseResolver
      * @param ValidationConfigResolverInterface $validationConfigResolver
      * @param ValidatorInterface                $captchaValidator
      * @param IsCaptchaEnabledInterface         $isCaptchaEnabled
      * @param LoggerInterface                   $logger
      * @param ErrorProcessor                    $errorProcessor
+     * @param RequestInterface|null             $request
+     * @param ResponseInterface|null            $response
      */
     public function __construct(
         CaptchaResponseResolverInterface $captchaResponseResolver,
@@ -68,7 +82,9 @@ class CommentFormObserver implements ObserverInterface
         ValidatorInterface $captchaValidator,
         IsCaptchaEnabledInterface $isCaptchaEnabled,
         LoggerInterface $logger,
-        ErrorProcessor $errorProcessor
+        ErrorProcessor $errorProcessor,
+        ?RequestInterface $request = null,
+        ?ResponseInterface $response = null
     ) {
         $this->captchaResponseResolver = $captchaResponseResolver;
         $this->validationConfigResolver = $validationConfigResolver;
@@ -76,6 +92,8 @@ class CommentFormObserver implements ObserverInterface
         $this->isCaptchaEnabled = $isCaptchaEnabled;
         $this->logger = $logger;
         $this->errorProcessor = $errorProcessor;
+        $this->request = $request ?: ObjectManager::getInstance()->get(RequestInterface::class);
+        $this->response = $response ?: ObjectManager::getInstance()->get(ResponseInterface::class);
     }
 
     /**
@@ -89,18 +107,14 @@ class CommentFormObserver implements ObserverInterface
     {
         $key = 'mfblog_comment';
         if ($this->isCaptchaEnabled->isCaptchaEnabledFor($key)) {
-            $controller = $observer->getControllerAction();
-            $request = $controller->getRequest();
-            $response = $controller->getResponse();
-
             $validationConfig = $this->validationConfigResolver->get($key);
 
             try {
-                $reCaptchaResponse = $this->captchaResponseResolver->resolve($request);
+                $reCaptchaResponse = $this->captchaResponseResolver->resolve($this->request);
             } catch (InputException $e) {
                 $this->logger->error($e);
                 $this->errorProcessor->processError(
-                    $response,
+                    $this->response,
                     $validationConfig->getValidationFailureMessage()
                 );
                 return;
@@ -109,7 +123,7 @@ class CommentFormObserver implements ObserverInterface
             $validationResult = $this->captchaValidator->isValid($reCaptchaResponse, $validationConfig);
             if (false === $validationResult->isValid()) {
                 $this->errorProcessor->processError(
-                    $response,
+                    $this->response,
                     $validationConfig->getValidationFailureMessage()
                 );
             }
