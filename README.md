@@ -1,4 +1,4 @@
-# [Magento 2 Blog Extension](https://magefan.com/magento2-blog-extension) ReCaptcha
+# [Magento 2 Blog Extension](https://magefan.com/magento2-blog-extension) ReCaptcha by Magefan
 
 [![Total Downloads](https://poser.pugx.org/magefan/module-blog-comments-recaptcha/downloads)](https://packagist.org/packages/magefan/module-blog-comments-recaptcha)
 [![Latest Stable Version](https://poser.pugx.org/magefan/module-blog-comments-recaptcha/v/stable)](https://packagist.org/packages/magefan/module-blog-comments-recaptcha)
