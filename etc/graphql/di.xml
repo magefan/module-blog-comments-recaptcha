@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © Magefan (support@magefan.com). All rights reserved.
+* Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\ReCaptchaWebapiGraphQl\Model\Resolver\ReCaptchaFormConfig">
+        <arguments>
+            <argument name="formTypes" xsi:type="array">
+                <item name="MFBLOG_COMMENT" xsi:type="string">mfblog_comment</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\ReCaptchaVersion3Invisible\Model\Config">
+        <arguments>
+            <argument name="formTypes" xsi:type="array">
+                <item name="mfblog_comment" xsi:type="string">mfblog_comment</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
